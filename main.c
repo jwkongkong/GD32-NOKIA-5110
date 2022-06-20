@@ -76,7 +76,7 @@ void adc_init(void)
 {
     /*------------------时钟配置------------------*/
     // GPIO时钟使能
-    rcu_periph_clock_enable(RCU_GPIOA);
+    rcu_periph_clock_enable(RCU_GPIOB);
     // ADC时钟使能
     rcu_periph_clock_enable(RCU_ADC);
     // ADC时钟8分频，最大14MHz
@@ -84,7 +84,7 @@ void adc_init(void)
 
     /*------------------ADC GPIO配置------------------*/
     // 必须为模拟输入
-    gpio_mode_set(GPIOA, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, GPIO_PIN_7);
+    gpio_mode_set(GPIOB, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, GPIO_PIN_0);
     
 
     /*------------------ADC工作模式配置------------------*/
@@ -110,7 +110,7 @@ void adc_init(void)
     adc_calibration_enable();
 
     // ADC 采样通道、采样时间
-    adc_regular_channel_config(0, ADC_CHANNEL_7, ADC_SAMPLETIME_55POINT5);
+    adc_regular_channel_config(0, ADC_CHANNEL_8, ADC_SAMPLETIME_55POINT5);
     
     // 使能 ADC 中断
     nvic_irq_enable(ADC_CMP_IRQn, 1, 1);
