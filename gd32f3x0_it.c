@@ -34,6 +34,10 @@ OF SUCH DAMAGE.
 
 #include "gd32f3x0_it.h"
 #include "systick.h"
+#include "gd32f3x0.h"
+#include "nokia_5110.h"
+
+uint16_t adcValue;
 
 /*!
     \brief      this function handles NMI exception
@@ -137,3 +141,15 @@ void SysTick_Handler(void)
 {
     delay_decrement();
 }
+
+void ADC_CMP_IRQHandler(void)
+{
+    delay_1ms(100);
+    adc_interrupt_flag_clear(ADC_INT_FLAG_EOC);               // 清除ADC规则组转换结束中断标志
+    
+    adcValue = adc_regular_data_read();                             // 读取ADC数据;
+    LCD_write_english_string(0, 10, "ADC Value:");
+    LCD_write_number(20, 20, adcValue);
+}
+
+

@@ -36,4 +36,6 @@ C:\Users\kongkong\Documents\GD32\Docs\GD32F3x0_Demo_Suites_V2.2.0\GD32F3x0_Demo_
   C:\Users\kongkong\Documents\GD32\Docs\GD32F3x0_Demo_Suites_V2.2.0\GD32F3x0_Demo_Suites_V2.2.0\GD32310G_START_Demo_Suites\Projects\01_GPIO_Runing_LED\EWARM\..\..\..\..\GD32F3x0_Firmware_Library\GD32F3x0_standard_peripheral\Include\gd32f3x0_wwdgt.h \
   C:\Users\kongkong\Documents\GD32\Docs\GD32F3x0_Demo_Suites_V2.2.0\GD32F3x0_Demo_Suites_V2.2.0\GD32310G_START_Demo_Suites\Projects\01_GPIO_Runing_LED\EWARM\..\..\..\..\GD32F3x0_Firmware_Library\GD32F3x0_standard_peripheral\Include\gd32f3x0_misc.h \
   C:\Users\kongkong\Documents\GD32\Docs\GD32F3x0_Demo_Suites_V2.2.0\GD32F3x0_Demo_Suites_V2.2.0\GD32310G_START_Demo_Suites\Projects\01_GPIO_Runing_LED\EWARM\..\..\..\..\GD32F3x0_Firmware_Library\GD32F3x0_standard_peripheral\Include\gd32f3x0_tsi.h \
-  C:\Users\kongkong\Documents\GD32\Docs\GD32F3x0_Demo_Suites_V2.2.0\GD32F3x0_Demo_Suites_V2.2.0\GD32310G_START_Demo_Suites\Projects\01_GPIO_Runing_LED\systick.h
+  C:\Users\kongkong\Documents\GD32\Docs\GD32F3x0_Demo_Suites_V2.2.0\GD32F3x0_Demo_Suites_V2.2.0\GD32310G_START_Demo_Suites\Projects\01_GPIO_Runing_LED\systick.h \
+  C:\Users\kongkong\Documents\GD32\Docs\GD32F3x0_Demo_Suites_V2.2.0\GD32F3x0_Demo_Suites_V2.2.0\GD32310G_START_Demo_Suites\Projects\01_GPIO_Runing_LED\nokia_5110.h \
+  C:\Users\kongkong\Documents\GD32\Docs\GD32F3x0_Demo_Suites_V2.2.0\GD32F3x0_Demo_Suites_V2.2.0\GD32310G_START_Demo_Suites\Projects\01_GPIO_Runing_LED\EWARM\..\..\..\Utilities\gd32f310g_start.h

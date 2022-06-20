@@ -293,3 +293,63 @@ void LCD_write_byte(unsigned char dat, unsigned char command)
   }
 
 
+ /******************************************************
+
+		整形数据转字符串函数
+        char *itoa(int value, char *string, int radix)
+		radix=10 标示是10进制	非十进制，转换结果为0;  
+ 
+	    例：d=-379;
+		执行	itoa(d, buf, 10); 后
+		
+		buf="-379"							   			  
+**********************************************************/
+char *itoa(int value, char *string, int radix)
+
+{
+ int     i, d;
+ int     flag = 0;
+ char    *ptr = string;
+ 
+ if (radix != 10)
+    {
+        *ptr = 0;
+        return string;
+    }
+ 
+ if (!value)
+    {
+        *ptr++ = 0x30;
+        *ptr = 0;
+        return string;
+    }
+ 
+    if (value < 0)
+    {
+        *ptr++ = '-';
+ 
+        value *= -1;
+    }
+ 
+ for(i = 10000; i > 0; i /= 10)
+    {
+     d = value / i;
+ 
+     if (d || flag)
+        {
+            *ptr++ = (char)(d + 0x30);
+            value -= (d * i);
+            flag = 1;
+        }
+    }
+ 
+ *ptr = 0;
+ 
+ return string;
+} 
+
+void LCD_write_number(unsigned char X,unsigned char Y, int number) {
+  char buf[20];
+  itoa(number, buf, 10);
+  LCD_write_english_string(X, Y, buf);
+}
